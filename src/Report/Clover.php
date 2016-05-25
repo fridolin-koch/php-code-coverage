@@ -292,7 +292,7 @@ class Clover
                 mkdir(dirname($target), 0777, true);
             }
 
-            return $xmlDocument->save($target);
+            return file_put_contents($target, $xmlDocument->saveXML());
         } else {
             return $xmlDocument->saveXML();
         }
