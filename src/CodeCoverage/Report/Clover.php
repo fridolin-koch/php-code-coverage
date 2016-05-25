@@ -287,7 +287,7 @@ class PHP_CodeCoverage_Report_Clover
                 mkdir(dirname($target), 0777, true);
             }
 
-            return $xmlDocument->save($target);
+            return $xmlDocument->save(urlencode($target));
         } else {
             return $xmlDocument->saveXML();
         }
